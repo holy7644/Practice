@@ -8,15 +8,14 @@
         Title="SCON" Height="387" Width="287"
         WindowStyle="None">
     <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="380" VerticalAlignment="Top" Width="280" Background="#FFFFFFFF" Margin="0,0,-1,-1">
+        <TabItem Header="Parameter" IsSelected="True" Background="#FFFFFFFF" FontSize="10">
+        </TabItem>
         <TabItem Header="Motor" IsSelected="True" Background="#FFFFFFFF" FontSize="10">
             <Grid Background="#FFFFFFFF">
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Button x:Name="BStepm" Content="Step -" HorizontalAlignment="Left" Margin="0,229,0,0" VerticalAlignment="Top" Width="50" FontSize="10" IsDefault="True" Height="45"/>
-                <Button x:Name="BStepp" Content="Step +" HorizontalAlignment="Left" Margin="55,229,0,0" VerticalAlignment="Top" Width="50" FontSize="10" IsDefault="True" Height="45"/>
-                <Button x:Name="BJogm" Content="Jog -" HorizontalAlignment="Left" Margin="155,229,0,0" VerticalAlignment="Top" Width="50" FontSize="10" IsDefault="True" Height="45"/>
-                <Button x:Name="BJogp" Content="Jog +" HorizontalAlignment="Left" Margin="210,229,0,0" VerticalAlignment="Top" Width="50" FontSize="10" IsDefault="True" Height="45"/>
+                <Button x:Name="BStepm" Content="Step -" HorizontalAlignment="Left" Margin="0,229,0,0" VerticalAlignment="Top" Width="60" FontSize="10" IsDefault="True" Height="45"/>
+                <Button x:Name="BStepp" Content="Step +" HorizontalAlignment="Left" Margin="63,229,0,0" VerticalAlignment="Top" Width="60" FontSize="10" IsDefault="True" Height="45"/>
+                <Button x:Name="BJogm" Content="Jog -" HorizontalAlignment="Left" Margin="141,229,0,0" VerticalAlignment="Top" Width="60" FontSize="10" IsDefault="True" Height="45"/>
+                <Button x:Name="BJogp" Content="Jog +" HorizontalAlignment="Left" Margin="210,229,0,0" VerticalAlignment="Top" Width="60" FontSize="10" IsDefault="True" Height="45"/>
                 <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom" Width="27" Margin="-4,0,0,-4">
                     <Label x:Name="LLm" Content=" L-" Background="White"/>
                 </Border>
@@ -39,7 +38,7 @@
                     <Label x:Name="LServo" Content="Servo" Background="White"/>
                 </Border>
                 <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom" Width="64" Margin="210,0,-4,-4">
-                    <Label x:Name="LHommed" Content="  Hommed" Background="White"/>
+                    <Label x:Name="LHommed" Content=" Hommed" Background="White"/>
                 </Border>
             </Grid>
             <!--<Grid Background="#FFE5E5E5"/>-->
