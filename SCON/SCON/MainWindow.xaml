@@ -6,65 +6,68 @@
         xmlns:local="clr-namespace:SCON"
         xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="SCON.MainWindow"
         mc:Ignorable="d"
-        Title="SCON" Height="656.25" Width="403" WindowStyle="ToolWindow">
+        Title="SCON" Height="594.917" Width="430.332" WindowStyle="ToolWindow">
 
 
-    <Grid Background="#FFffff" Height="597" VerticalAlignment="Top" HorizontalAlignment="Left" Width="390" Margin="3,2,0,0">
-        <TabControl x:Name="tabControl" Height="504" VerticalAlignment="Top" Background="#FFFFFFFF" SelectionChanged="TabControl_SelectionChanged" BorderBrush="#FF0E0606" Margin="1,0">
-            <TabItem Header="Parameter" IsSelected="True" Background="#FFFFFFFF" FontSize="18" Margin="-2,-2,2,0" BorderBrush="Black" Foreground="Black">
-                <Grid Background="#FFFFFFFF" Margin="0,0,-2,-1" HorizontalAlignment="Left" Width="381">
-                    <TextBox x:Name="textBox" Height="27" TextWrapping="Wrap" Margin="0,0,0,442" Text="Home Mathod" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="171,0,0,0" VerticalAlignment="Top" FontSize="18" Width="210" Height="27" SelectionChanged="ComboBox_SelectionChanged">
+    <Grid Background="#FFffff" Height="552" VerticalAlignment="Top" Margin="0,7,7,0" HorizontalAlignment="Right" Width="405">
+        <TabControl x:Name="tabControl" Height="504" VerticalAlignment="Top" Background="#FFFFFFFF" SelectionChanged="TabControl_SelectionChanged" BorderBrush="#FF858282" Margin="0,7,6,0" HorizontalAlignment="Right" Width="392">
+            <TabItem Header="Parameter" IsSelected="True" Background="White" FontSize="18" Margin="-2,-1,0,1" BorderBrush="White" OpacityMask="#FF994747" Foreground="Black" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="95">
+                <Grid Background="#FFFFFFFF" Margin="0,0,-2,0" HorizontalAlignment="Left" Width="388" Height="464" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="textBox" Height="27" TextWrapping="Wrap" Margin="-3,0,0,440" Text="Home Mathod" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172" BorderBrush="#FF858282"/>
+                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="168,-3,-1,0" VerticalAlignment="Top" FontSize="18" Width="221" Height="27" SelectionChanged="ComboBox_SelectionChanged" BorderBrush="{x:Null}">
                         <ComboBoxItem Content="1. Positive Direction" FontSize="18"/>
                         <ComboBoxItem Content="2. Negative Direction" FontSize="18"/>
 
                     </ComboBox>
-                    <TextBox x:Name="textBox_Copy" Height="27" TextWrapping="Wrap" Margin="0,0,0,416" Text="Operaion Direction" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <ComboBox x:Name="comboBox_Copy" HorizontalAlignment="Left" Margin="171,26,0,0" VerticalAlignment="Top" FontSize="18" Width="210" Height="27" SelectionChanged="ComboBox_SelectionChanged">
+                    <TextBox x:Name="textBox_Copy" Height="27" TextWrapping="Wrap" Margin="-3,0,0,414" Text="Operaion Direction" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172" BorderBrush="#FF858282"/>
+                    <ComboBox x:Name="comboBox_Copy" HorizontalAlignment="Left" Margin="168,23,-1,0" VerticalAlignment="Top" FontSize="18" Width="221" Height="27" SelectionChanged="ComboBox_SelectionChanged" BorderBrush="{x:Null}">
                         <ComboBoxItem Content="1. Positive Direction" FontSize="18"/>
                         <ComboBoxItem Content="2. Negative Direction" FontSize="18"/>
 
                     </ComboBox>
-                    <TextBox x:Name="textBox_Copy1" Height="27" TextWrapping="Wrap" Margin="0,0,0,390" Text="Encoder Kind" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <ComboBox x:Name="comboBox_Copy1" HorizontalAlignment="Left" Margin="171,52,0,0" VerticalAlignment="Top" FontSize="18" Width="210" Height="27" SelectionChanged="ComboBox_SelectionChanged">
+                    <TextBox x:Name="textBox_Copy1" Height="27" TextWrapping="Wrap" Margin="-3,0,0,388" Text="Encoder Kind" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172" BorderBrush="#FF858282"/>
+                    <ComboBox x:Name="comboBox_Copy1" HorizontalAlignment="Left" Margin="168,49,-1,0" VerticalAlignment="Top" FontSize="18" Width="221" Height="27" SelectionChanged="ComboBox_SelectionChanged" BorderBrush="{x:Null}">
                         <ComboBoxItem Content="1. Servo Motor" FontSize="18"/>
                         <ComboBoxItem Content="2. Step Motor" FontSize="18"/>
 
                     </ComboBox>
-                    <TextBox x:Name="textBox_Copy2" Height="27" TextWrapping="Wrap" Margin="0,0,0,364" Text="Orignal Position" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <TextBox x:Name="textBox_Copy3" Height="27" TextWrapping="Wrap" Margin="171,0,0,364" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="210" />
-                    <TextBox x:Name="textBox_Copy4" Height="27" TextWrapping="Wrap" Margin="0,0,0,338" Text="Accelerate(sec)" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <TextBox x:Name="textBox_Copy5" Height="27" TextWrapping="Wrap" Margin="171,0,0,338" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="210" />
-                    <TextBox x:Name="textBox_Copy6" Height="27" TextWrapping="Wrap" Margin="0,0,0,312" Text="Decelerate(sec)" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <TextBox x:Name="textBox_Copy7" Height="27" TextWrapping="Wrap" Margin="171,0,0,312" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="210" />
-                    <TextBox x:Name="textBox_Copy8" Height="27" TextWrapping="Wrap" Margin="0,0,0,286" Text="Speed" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <TextBox x:Name="textBox_Copy9" Height="27" TextWrapping="Wrap" Margin="171,0,0,286" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="210" />
-                    <TextBox x:Name="textBox_Copy10" Height="27" TextWrapping="Wrap" Margin="0,0,0,260" Text="Maximum Speed" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <TextBox x:Name="textBox_Copy11" Height="27" TextWrapping="Wrap" Margin="171,0,0,260" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="210" />
-                    <TextBox x:Name="textBox_Copy12" Height="27" TextWrapping="Wrap" Margin="0,0,0,234" Text="Homming Speed" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <TextBox x:Name="textBox_Copy13" Height="27" TextWrapping="Wrap" Margin="171,0,0,234" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="210" />
-                    <TextBox x:Name="textBox_Copy14" Height="27" TextWrapping="Wrap" Margin="0,0,0,208" Text="Minimum Position" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <TextBox x:Name="textBox_Copy15" Height="27" TextWrapping="Wrap" Margin="171,0,0,208" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="210" />
-                    <TextBox x:Name="textBox_Copy16" Height="27" TextWrapping="Wrap" Margin="0,0,0,182" Text="Maximum Position" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <TextBox x:Name="textBox_Copy17" Height="27" TextWrapping="Wrap" Margin="171,0,0,182" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="210" />
-                    <TextBox x:Name="textBox_Copy18" Height="27" TextWrapping="Wrap" Margin="0,0,0,156" Text="Pich / Revolution" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <TextBox x:Name="textBox_Copy19" Height="27" TextWrapping="Wrap" Margin="171,0,0,156" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="210" />
-                    <TextBox x:Name="textBox_Copy20" Height="27" TextWrapping="Wrap" Margin="0,0,0,130" Text="Pulse / Revolution" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <TextBox x:Name="textBox_Copy21" Height="27" TextWrapping="Wrap" Margin="171,0,0,130" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="210" />
-                    <TextBox x:Name="textBox_Copy22" Height="27" TextWrapping="Wrap" Margin="0,0,0,104" Text="Start Delay (ms)" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <TextBox x:Name="textBox_Copy23" Height="27" TextWrapping="Wrap" Margin="171,0,0,104" Text="0" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="210" />
-                    <TextBox x:Name="textBox_Copy24" Height="27" TextWrapping="Wrap" Margin="0,0,0,78" Text="Start Delay (ms)" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <TextBox x:Name="textBox_Copy25" Height="27" TextWrapping="Wrap" Margin="171,0,0,78" Text="0" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="210" />
-                    <TextBox x:Name="textBox_Copy26" Height="27" TextWrapping="Wrap" Margin="0,0,0,52" Text="Start Delay (ms)" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <TextBox x:Name="textBox_Copy27" Height="27" TextWrapping="Wrap" Margin="171,0,0,52" Text="0" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="210" />
-                    <TextBox x:Name="textBox_Copy28" Height="27" TextWrapping="Wrap" Margin="0,0,0,26" Text="Start Delay (ms)" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <TextBox x:Name="textBox_Copy29" Height="27" TextWrapping="Wrap" Margin="171,0,0,26" Text="0" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="210" />
-                    <TextBox x:Name="textBox_Copy30" Height="27" TextWrapping="Wrap" Text="Start Delay (ms)" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
-                    <TextBox x:Name="textBox_Copy31" Height="27" TextWrapping="Wrap" Margin="171,0,0,0" Text="0" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="210" />
+                    <TextBox x:Name="textBox_Copy2" Height="27" TextWrapping="Wrap" Margin="-3,0,0,362" Text="Orignal Position" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
+                    <TextBox x:Name="textBox_Copy3" Height="27" TextWrapping="Wrap" Margin="168,0,-1,362" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="221" BorderBrush="#FF858282" />
+                    <TextBox x:Name="textBox_Copy4" Height="27" TextWrapping="Wrap" Margin="-3,0,0,336" Text="Accelerate(sec)" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172" BorderBrush="#FF858282"/>
+                    <TextBox x:Name="textBox_Copy5" Height="27" TextWrapping="Wrap" Margin="168,0,-1,336" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="221" BorderBrush="#FF858282" />
+                    <TextBox x:Name="textBox_Copy6" Height="27" TextWrapping="Wrap" Margin="-3,0,0,310" Text="Decelerate(sec)" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172"/>
+                    <TextBox x:Name="textBox_Copy7" Height="27" TextWrapping="Wrap" Margin="168,0,-1,310" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="221" BorderBrush="#FF858282" />
+                    <TextBox x:Name="textBox_Copy8" Height="27" TextWrapping="Wrap" Margin="-3,0,0,284" Text="Speed" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172" BorderBrush="#FF858282"/>
+                    <TextBox x:Name="textBox_Copy9" Height="27" TextWrapping="Wrap" Margin="168,0,-1,284" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="221" BorderBrush="#FF858282" />
+                    <TextBox x:Name="textBox_Copy10" Height="27" TextWrapping="Wrap" Margin="-3,0,0,258" Text="Maximum Speed" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172" BorderBrush="#FF858282"/>
+                    <TextBox x:Name="textBox_Copy11" Height="27" TextWrapping="Wrap" Margin="168,0,-1,258" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="221" BorderBrush="#FF858282" />
+                    <TextBox x:Name="textBox_Copy12" Height="27" TextWrapping="Wrap" Margin="-3,0,219,232" Text="Homming Speed" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Right" Width="172" BorderBrush="#FF858282"/>
+                    <TextBox x:Name="textBox_Copy13" Height="27" TextWrapping="Wrap" Margin="168,0,-1,232" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="221" BorderBrush="#FF858282" />
+                    <TextBox x:Name="textBox_Copy14" Height="27" TextWrapping="Wrap" Margin="-3,0,0,206" Text="Minimum Position" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172" BorderBrush="#FF858282"/>
+                    <TextBox x:Name="textBox_Copy15" Height="27" TextWrapping="Wrap" Margin="168,0,-1,206" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="221" BorderBrush="#FF858282" />
+                    <TextBox x:Name="textBox_Copy16" Height="27" TextWrapping="Wrap" Margin="-3,0,0,180" Text="Maximum Position" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172" BorderBrush="#FF858282"/>
+                    <TextBox x:Name="textBox_Copy17" Height="27" TextWrapping="Wrap" Margin="168,0,-1,180" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="221" BorderBrush="#FF858282" />
+                    <TextBox x:Name="textBox_Copy18" Height="27" TextWrapping="Wrap" Margin="-3,0,0,154" Text="Pich / Revolution" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172" BorderBrush="#FF858282"/>
+                    <TextBox x:Name="textBox_Copy19" Height="27" TextWrapping="Wrap" Margin="168,0,-1,154" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="221" BorderBrush="#FF858282" />
+                    <TextBox x:Name="textBox_Copy20" Height="27" TextWrapping="Wrap" Margin="-3,0,0,128" Text="Pulse / Revolution" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172" BorderBrush="#FF858282"/>
+                    <TextBox x:Name="textBox_Copy21" Height="27" TextWrapping="Wrap" Margin="168,0,-1,128" Text="0.0000" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="221" BorderBrush="#FF858282" />
+                    <TextBox x:Name="textBox_Copy22" Height="27" TextWrapping="Wrap" Margin="-3,0,0,102" Text="Start Delay (ms)" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172" BorderBrush="#FF858282"/>
+                    <TextBox x:Name="textBox_Copy23" Height="27" TextWrapping="Wrap" Margin="168,0,-1,102" Text="0" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="221" BorderBrush="#FF858282" />
+                    <TextBox x:Name="textBox_Copy24" Height="27" TextWrapping="Wrap" Margin="-3,0,0,76" Text="Start Delay (ms)" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172" BorderBrush="#FF858282"/>
+                    <TextBox x:Name="textBox_Copy25" Height="27" TextWrapping="Wrap" Margin="168,0,-1,76" Text="0" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="221" BorderBrush="#FF858282" />
+                    <TextBox x:Name="textBox_Copy26" Height="27" TextWrapping="Wrap" Margin="-3,0,0,50" Text="Start Delay (ms)" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172" BorderBrush="#FF858282"/>
+                    <TextBox x:Name="textBox_Copy27" Height="27" TextWrapping="Wrap" Margin="168,0,-1,50" Text="0" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="221" BorderBrush="#FF858282" />
+                    <TextBox x:Name="textBox_Copy28" Height="27" TextWrapping="Wrap" Margin="-3,0,0,24" Text="Start Delay (ms)" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172" BorderBrush="#FF858282"/>
+                    <TextBox x:Name="textBox_Copy29" Height="27" TextWrapping="Wrap" Margin="168,0,-1,24" Text="0" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="221" BorderBrush="#FF858282" />
+                    <TextBox x:Name="textBox_Copy30" Height="27" TextWrapping="Wrap" Text="Start Delay (ms)" VerticalAlignment="Bottom" FontSize="18" IsReadOnly="True" HorizontalAlignment="Left" Width="172" Margin="-3,0,0,-2" BorderBrush="#FF858282"/>
+                    <TextBox x:Name="textBox_Copy31" Height="27" TextWrapping="Wrap" Margin="168,0,-1,-2" Text="0" VerticalAlignment="Bottom" FontSize="18" TextAlignment="Right" HorizontalAlignment="Left" Width="221" BorderBrush="#FF858282" />
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Motor" IsSelected="True" Background="#FFFFFFFF" FontSize="18" Margin="-2,-2,-35,1" BorderBrush="Black">
+            <TabItem Header="Motor" IsSelected="True" Background="#FFFFFFFF" FontSize="18" Margin="-2,-2,-35,1" BorderBrush="White">
                 <Grid Background="#FFFFFFFF" Margin="0,0,0,-2">
                     <Button x:Name="BStepm" Content="Step -" HorizontalAlignment="Left" Margin="0,241,0,0" VerticalAlignment="Top" Width="60" FontSize="10" IsDefault="True" Height="45"/>
                     <Button x:Name="BStepp" Content="Step +" HorizontalAlignment="Left" Margin="64,241,0,0" VerticalAlignment="Top" Width="60" FontSize="10" IsDefault="True" Height="45"/>
@@ -75,19 +78,19 @@
             </TabItem>
 
         </TabControl>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="37" Margin="1,503,0,0" VerticalAlignment="Top" Width="162">
+        <Border BorderBrush="#FF858282" BorderThickness="1" HorizontalAlignment="Left" Height="37" Margin="7,507,0,0" VerticalAlignment="Top" Width="162">
 
-            <TextBox x:Name="textBox2_Copy2" HorizontalAlignment="Left" Margin="2,2,0,0" TextWrapping="Wrap" Text="00000.00000" Width="155" BorderBrush="{x:Null}" TextAlignment="Center" Height="29" VerticalAlignment="Top" FontSize="20" IsReadOnly="True"/>
+            <TextBox x:Name="textBox2_Copy2" HorizontalAlignment="Left" Margin="-1" TextWrapping="Wrap" Text="00000.00000" Width="162" BorderBrush="{x:Null}" TextAlignment="Center" Height="37" VerticalAlignment="Top" FontSize="22" IsReadOnly="True" Background="White"/>
         </Border>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="23" Margin="323,503,0,0" VerticalAlignment="Top" Width="66">
-            <TextBox x:Name="textBox2_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="000.0" Width="64" BorderBrush="{x:Null}" FontSize="14" Height="22" VerticalAlignment="Top" IsReadOnly="True" Margin="0,0,0,-1" TextAlignment="Center"/>
+        <Border BorderBrush="#FF858282" BorderThickness="1" HorizontalAlignment="Left" Height="23" Margin="329,507,0,0" VerticalAlignment="Top" Width="70">
+            <TextBox x:Name="textBox2_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="000.0" Width="71" BorderBrush="{x:Null}" FontSize="14" Height="23" VerticalAlignment="Top" IsReadOnly="True" TextAlignment="Center" Margin="-2,-1,-1,-1" Background="White"/>
         </Border>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="15" Margin="323,525,0,0" VerticalAlignment="Top" Width="66">
-            <TextBox x:Name="textBox2_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="HOMMED" Width="64" BorderBrush="{x:Null}" TextAlignment="Center" FontSize="9" Height="13" VerticalAlignment="Top" IsReadOnly="True"/>
+        <Border BorderBrush="#FF858282" BorderThickness="1" HorizontalAlignment="Left" Height="15" Margin="329,529,0,0" VerticalAlignment="Top" Width="70">
+            <TextBox x:Name="textBox2_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="HOMMED" Width="71" BorderBrush="{x:Null}" TextAlignment="Center" FontSize="10" Height="15" VerticalAlignment="Top" IsReadOnly="True" Margin="-2,-1,-1,-1"/>
         </Border>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="37" Margin="162,503,0,0" VerticalAlignment="Top" Width="162">
+        <Border BorderBrush="#FF858282" BorderThickness="1" HorizontalAlignment="Left" Height="37" Margin="168,507,0,0" VerticalAlignment="Top" Width="162">
 
-            <TextBox x:Name="textBox2_Copy3" HorizontalAlignment="Left" Margin="2,2,0,0" TextWrapping="Wrap" Text="00000.00000" Width="155" BorderBrush="{x:Null}" TextAlignment="Center" Height="29" VerticalAlignment="Top" FontSize="20" IsReadOnly="True"/>
+            <TextBox x:Name="textBox2_Copy3" HorizontalAlignment="Left" Margin="-1,-1,-1,0" TextWrapping="Wrap" Text="00000.00000" Width="162" BorderBrush="{x:Null}" TextAlignment="Center" Height="36" VerticalAlignment="Top" FontSize="22" IsReadOnly="True" Background="White"/>
         </Border>
 
     </Grid>
